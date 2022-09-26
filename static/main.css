@@ -28,7 +28,8 @@ body{
     top: 0;
     width: 100%;
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .container{

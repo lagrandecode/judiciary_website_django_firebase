@@ -10,6 +10,7 @@ import pyrebase
 firebaseConfig = {
   "apiKey": "AIzaSyDN-Sne0GF1uSNlIYU_aRKqI7iIigAh7ww",
   "authDomain": "judicary-5d20a.firebaseapp.com",
+  "databaseURL": "https://judicary-5d20a-default-rtdb.firebaseio.com",
   "projectId": "judicary-5d20a",
   "storageBucket": "judicary-5d20a.appspot.com",
   "messagingSenderId": "286397750808",
@@ -21,6 +22,19 @@ firebaseConfig = {
 
 firebase = pyrebase.initialize_app(firebaseConfig)
 
+# Get reference to the auth service
+
+auth = firebase.auth()
 
 def home(request):
+    try:
+        email = input("email:")
+        password = input("password:")
+        auth.sign_in_with_email_and_password(email=email, password=password)
+        print("successful")
+    except:
+        print("error")
+
+
+
     return render(request, 'home.html')

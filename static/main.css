@@ -22,10 +22,8 @@ body{
     padding: 30px;
 }
 
-.top-title h1{
-    display: flex;
-    font-size: 25px;
-    color: aliceblue;
+.top{
+    color: white;
 }
 
 .container{

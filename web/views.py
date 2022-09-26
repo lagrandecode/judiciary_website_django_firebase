@@ -19,6 +19,8 @@ firebaseConfig = {
 
 # # // Initialize Firebase
 
+firebase = pyrebase.initialize_app(firebaseConfig)
+
 
 def home(request):
     return render(request, 'home.html')

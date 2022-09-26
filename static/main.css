@@ -23,13 +23,13 @@ body{
 }
 
 .top{
-    color: red;
+    color: var(--white);
     position: absolute;
     top: 0;
     width: 100%;
     display: flex;
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .container{

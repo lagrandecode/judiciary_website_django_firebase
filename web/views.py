@@ -1,4 +1,5 @@
-from django.shortcuts import render
+import email
+from django.shortcuts import render,redirect
 import pyrebase
 
 # Create your views here.
@@ -27,14 +28,21 @@ firebase = pyrebase.initialize_app(firebaseConfig)
 auth = firebase.auth()
 
 def home(request):
-    try:
-        email = input("email:")
-        password = input("password:")
-        auth.sign_in_with_email_and_password(email=email, password=password)
-        print("successful")
-    except:
-        print("error")
+    if request.method == 'POST':
+        try:
+            email = request.POST['email']
+            password = request.POST['password']
+            auth.sign_in_with_email_and_password(email=email,password=password)
+            if password == auth.sign_in_with_email_and_password(email=email):
+
+                return redirect('dashboard.html/')
+            else:
+                print("error")
+        except:
+            print('error')
+    else:
+        return render(request, 'home.html')
 
 
-
-    return render(request, 'home.html')
+def dashboard(request):
+        return render(request, 'dashboard.html')

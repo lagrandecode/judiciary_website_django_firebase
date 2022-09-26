@@ -42,18 +42,19 @@
             </div>
         </div>
         
-            <form action="#"> 
+            <form action="dashboard" method="post">
+                {% csrf_token %} 
                 <div class="form-content">
                     <div class="login-form">
                         <div class="title">Login</div>
                         <div class="input-boxes">
                             <div class="input-box">
                                 <i class='bx bxs-envelope'></i>
-                                <input type="text" placeholder="Enter your IBILE zone ID" required>
+                                <input type="text" name="email" placeholder="Enter your IBILE zone ID" required>
                             </div>
                             <div class="input-box">
                                 <i class='bx bxs-lock-alt'></i>
-                                <input type="password" placeholder="Password" required>
+                                <input type="password" name="password" placeholder="Password" required>
                             </div>
                             <div class="button">
                                 <input type="submit" value="Submit">
@@ -69,16 +70,16 @@
                         <div class="input-boxes">
                             <div class="input-box">
                                 <i class='bx bxs-envelope'></i>
-                                <input type="text" placeholder="Enter your IBILE zone ID" required>
+                                <input type="text" placeholder="Enter your IBILE zone ID">
                             </div>
 
                             <div class="input-box">
                                 <i class='bx bxs-lock-alt'></i>
-                                <input type="password" placeholder="Password" required>
+                                <input type="password" placeholder="Password">
                             </div>
                             <div class="input-box">
                                 <i class='bx bxs-lock-alt'></i>
-                                <input type="password" placeholder="Confirm Password" required>
+                                <input type="password" placeholder="Confirm Password">
                             </div>
                             <div class="button">
                                 <input type="submit" value="Submit">

@@ -1,4 +1,5 @@
 from django.shortcuts import render
+import pyrebase
 
 # Create your views here.
 
@@ -17,7 +18,7 @@ firebaseConfig = {
 };
 
 # # // Initialize Firebase
-# firebase = pyrebase
+
 
 def home(request):
     return render(request, 'home.html')

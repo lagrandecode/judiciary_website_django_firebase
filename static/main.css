@@ -32,17 +32,22 @@ body{
     width: 100%;
     display: flex;
     margin-bottom: 10px;
-    margin-top: 20px;
-    padding: 30px;
+    margin-top: 75px;
+    padding-left: 10px;
+    padding-right: 10px;
 
 }
+
 
 .container{
     position: relative;
     max-width: 850px;
     width: 100%;
     background: var(--white);
-    padding: 40px 30px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     perspective: 2700px;
 }
@@ -263,6 +268,10 @@ span:hover{
     }
     .container #flip:checked ~ form .login-form{
         display: none;
+    }
+    .top{
+        font-size: 12px;
+
     }
 
 

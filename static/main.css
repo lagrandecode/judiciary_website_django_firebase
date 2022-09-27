@@ -11,6 +11,8 @@
 :root{
     --main-color: #7d2ae8; 
     --white: #ffff;
+    --red: red;
+    
 }
 
 body{
@@ -48,7 +50,6 @@ body{
 .container #flip:checked~ .cover{
     transform: rotateY(-180deg);
     
-
 }
 
 .cover{
@@ -232,6 +233,13 @@ span:hover{
 .container #flip{
     display: none;
 
+}
+
+
+.message{
+    color: var(--red);
+    font-weight: bold;
+    font-size: 12px;
 }
 
 @media (max-width: 730px){

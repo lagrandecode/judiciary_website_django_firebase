@@ -247,6 +247,23 @@ span:hover{
     font-size: 12px;
 }
 
+/* starting dashboard css here */
+
+
+
+.header{
+    display: flex;
+
+}
+
+
+.dashlogo{
+    height: 100px;
+    width: 100px;
+}
+/* 
+end dashboard css here */
+
 @media (max-width: 730px){
     .cover{
         display: none;

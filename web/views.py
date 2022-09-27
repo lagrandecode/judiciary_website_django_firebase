@@ -1,5 +1,5 @@
 import email
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,HttpResponse
 import pyrebase
 
 # Create your views here.
@@ -33,11 +33,7 @@ def home(request):
             email = request.POST['email']
             password = request.POST['password']
             auth.sign_in_with_email_and_password(email=email,password=password)
-            if password == auth.sign_in_with_email_and_password(email=email):
-
-                return redirect('dashboard.html/')
-            else:
-                print("error")
+            print("successful")
         except:
             print('error')
     else:

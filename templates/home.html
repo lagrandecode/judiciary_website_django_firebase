@@ -42,7 +42,7 @@
             </div>
         </div>
         
-            <form action="/" method="post">
+            <form method="post">
                 {% csrf_token %} 
                 <div class="form-content">
                     <div class="login-form">
@@ -93,6 +93,11 @@
 
 
             </form>
+            {% for message in messages %}
+            <div class="message">
+                <h3>{{message}}</h3>
+            </div>
+            {% endfor %}
         
 
     </div>

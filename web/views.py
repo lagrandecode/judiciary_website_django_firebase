@@ -1,6 +1,7 @@
 import email
 from django.shortcuts import render,redirect,HttpResponse
 import pyrebase
+from django.contrib import messages
 
 # Create your views here.
 
@@ -34,10 +35,18 @@ def home(request):
             password = request.POST['password']
             auth.sign_in_with_email_and_password(email=email,password=password)
             print("successful")
+            return redirect('dashboard')
         except:
-            print('error')
-    else:
-        return render(request, 'home.html')
+            messages.info(request,'Incorrect Password or Username')
+    return render(request, 'home.html')
+
+    # if request.method=='POST':
+    #     email = request.POST['email']
+    #     password = request.POST['password']
+    #     auth.sign_in_with_email_and_password(email=email,password=password)
+    #     print("success")
+    #     return redirect('dashboard')
+    # return render(request, 'home.html')
 
 
 def dashboard(request):

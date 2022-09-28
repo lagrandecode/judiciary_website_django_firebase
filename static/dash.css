@@ -78,6 +78,7 @@ body{
 .grid{
     margin-top: 30px;
     margin-left: 50px;
+    margin-bottom: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
@@ -100,6 +101,14 @@ body{
 
 }
 
+.title-card{
+    text-align: center;
+}
+.val{
+    justify-content: center;
+    text-align: center;
+    padding-top: 70px;
+}
 
 
 

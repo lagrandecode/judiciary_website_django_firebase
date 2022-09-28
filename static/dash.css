@@ -16,31 +16,31 @@
 }
 
 body{
-    min-height: 100vh;
-    display: flex;
     background: var(--main-color);
-    padding: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 16px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
-
 .header{
     display: flex;
-    gap: 1rem;
+    flex-wrap: wrap;
 
-    justify-content: space-between;
+
+
 }
-
 .nav{
-    padding-left: 50px;
-    padding-top: 20px;
-    padding-right: 50px;
+    padding-top: 30px;
     display: flex;
     justify-content: space-between;
-
+    /* gap: 8rem; */
 }
+
 
 .logo img{
-    width: 100%;
+    width: 100px;
     height: 100px;
 }
+
 

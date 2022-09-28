@@ -20,27 +20,53 @@ body{
     padding-left: 10px;
     padding-right: 10px;
     font-size: 16px;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: var(--white);
+}
+
+.container{
+    
+    height: 100vh;
+
+}
+
+.nav{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20rem;
 }
 .header{
     display: flex;
     flex-wrap: wrap;
-
-
-
-}
-.nav{
     padding-top: 30px;
-    display: flex;
     justify-content: space-between;
-    /* gap: 8rem; */
+    display: flex;
+    gap: 4rem;
 }
+
 
 
 .logo img{
     width: 100px;
     height: 100px;
+    margin-right: 30px;
+}
+
+.texttitle{
+    display: flex;
+}
+
+.aa{
+    display: flex;
+    cursor: pointer;
+    color: var(--red);
+    text-decoration: none;
+    list-style: none;
+    font-size: medium;
 }
 
 

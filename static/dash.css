@@ -60,6 +60,12 @@ body{
     display: flex;
 }
 
+.texttitle:hover{
+    transition: all .4s ease;
+    color: var(--red);
+    cursor: pointer;
+}
+
 .aa{
     display: flex;
     cursor: pointer;
@@ -68,5 +74,7 @@ body{
     list-style: none;
     font-size: medium;
 }
+
+
 
 

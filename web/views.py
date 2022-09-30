@@ -51,10 +51,28 @@ def dashboard(request):
     header={
         "Authorization":"Token 9d605040f864b7572c3938ae5eaeacd28519dee7"
     }
-    fetch_csv = requests.get("https://kobo.humanitarianresponse.info/api/v2/assets/aT5kWCgcFpLDuBmTsowebo.json",
+    fetch_csv = requests.get("https://kobo.humanitarianresponse.info/api/v2/assets/aT5kWCgcFpLDuBmTsowebo/export-settings/esRJfp8Wm4xjbjdbXxhxw9R.json",
     headers=header,auth=('lagosjudiciarytemplate','lagosstate'))
     csv = json.loads(fetch_csv.content)
     context={
         "csv":csv
     }
     return render(request,"dashboard.html",context)
+# end csv function
+
+
+# function to download xlsx
+def dataxlsx(request):
+    import json
+    import requests
+    header={
+        "Authorization":"Token 9d605040f864b7572c3938ae5eaeacd28519dee7"
+    }
+    fetch_xlsx = requests.get("https://kobo.humanitarianresponse.info/api/v2/assets/aT5kWCgcFpLDuBmTsowebo/export-settings/esRJfp8Wm4xjbjdbXxhxw9R.json",
+    headers=header,auth=('lagosjudiciarytemplate','lagosstate'))
+    xlsx = json.loads(fetch_xlsx.content)
+    context={
+        "xlsx":xlsx
+    }
+    return render(request,"dashboard.html",context)
+# end xlsx function

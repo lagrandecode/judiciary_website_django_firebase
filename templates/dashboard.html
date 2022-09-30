@@ -15,7 +15,6 @@
     <!-- end css -->
 </head>
 <body>
-    {% for i in csv %}
     <div class="container">
         <div class="header">
             <div class="logo">
@@ -96,19 +95,19 @@
                 </div>
             </div>
 
-
-            <div class="card">
-                <a href="{{i.data_url_csv}}"></a>
-                <div class="wrapper">
-                    <div class="title-card">
-                        <h3 class="title-card">Download CSV Data</h3>
-                        <div class="kobopoint">
-                            <h3 class="val">Click on this card to download the excel</h3>
-        
+            <a href="{{csv.data_url_csv}}">
+                <div class="card">
+                    <div class="wrapper">
+                        <div class="title-card">
+                            <h3 class="title-card">Download CSV Data</h3>
+                            <div class="kobopoint">
+                                <h3 class="val"></h3>
+            
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
 
 
@@ -117,9 +116,5 @@
        
     </div>
     
-
-
-
-    {% endfor %}
 </body>
 </html>

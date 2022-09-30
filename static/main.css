@@ -254,6 +254,8 @@ span:hover{
 
 .header{
     display: flex;
+    justify-content: space-evenly;
+   
 
 }
 

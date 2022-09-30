@@ -1,4 +1,6 @@
 import email
+from email import header
+from multiprocessing import context
 from django.shortcuts import render,redirect,HttpResponse
 import pyrebase
 from django.contrib import messages
@@ -29,6 +31,7 @@ firebase = pyrebase.initialize_app(firebaseConfig)
 auth = firebase.auth()
 
 def home(request):
+# This is the authentication functions
     if request.method == 'POST':
         try:
             email = request.POST['email']
@@ -39,15 +42,19 @@ def home(request):
         except:
             messages.info(request,'Incorrect Password or Username')
     return render(request, 'home.html')
+# End of authentication functions
 
-    # if request.method=='POST':
-    #     email = request.POST['email']
-    #     password = request.POST['password']
-    #     auth.sign_in_with_email_and_password(email=email,password=password)
-    #     print("success")
-    #     return redirect('dashboard')
-    # return render(request, 'home.html')
-
-
+# function to download csv 
 def dashboard(request):
-        return render(request, 'dashboard.html')
+    import json
+    import requests
+    header={
+        "Authorization":"Token 9d605040f864b7572c3938ae5eaeacd28519dee7"
+    }
+    fetch_csv = requests.get("https://kobo.humanitarianresponse.info/api/v2/assets/aT5kWCgcFpLDuBmTsowebo.json",
+    headers=header,auth=('lagosjudiciarytemplate','lagosstate'))
+    csv = json.loads(fetch_csv.content)
+    context={
+        "csv":csv
+    }
+    return render(request,"dashboard.html",context)

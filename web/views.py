@@ -76,3 +76,20 @@ def dataxlsx(request):
     }
     return render(request,"dashboard.html",context)
 # end xlsx function
+
+
+# function to view total submission
+def dataxlsx(request):
+    import json
+    import requests
+    header={
+        "Authorization":"Token 9d605040f864b7572c3938ae5eaeacd28519dee7"
+    }
+    fetch_submission = requests.get("https://kobo.humanitarianresponse.info/api/v2/assets/aT5kWCgcFpLDuBmTsowebo/export-settings/esRJfp8Wm4xjbjdbXxhxw9R.json",
+    headers=header,auth=('lagosjudiciarytemplate','lagosstate'))
+    submission = json.loads(fetch_submission.content)
+    context={
+        "submission":submission
+    }
+    return render(request,"dashboard.html",context)
+# end function

@@ -129,5 +129,13 @@ body{
 }
 
 
+.kobopoint img{
+    text-align: center;
+    align-items: center;
+    height: 150px;
+    width: 200px;
+}
+
+
 
 

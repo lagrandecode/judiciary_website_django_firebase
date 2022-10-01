@@ -1,6 +1,7 @@
 import email
 from email import header
 from multiprocessing import context
+from re import sub
 from django.shortcuts import render,redirect,HttpResponse
 import pyrebase
 from django.contrib import messages
@@ -91,5 +92,6 @@ def dataxlsx(request):
     context={
         "submission":submission
     }
+    print(submission)
     return render(request,"dashboard.html",context)
 # end function

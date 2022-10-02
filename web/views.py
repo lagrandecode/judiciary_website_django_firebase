@@ -80,13 +80,13 @@ def dataxlsx(request):
 
 
 # function to view total submission
-def dataxlsx(request):
+def count(request):
     import json
     import requests
     header={
         "Authorization":"Token 9d605040f864b7572c3938ae5eaeacd28519dee7"
     }
-    fetch_submission = requests.get("https://kobo.humanitarianresponse.info/api/v2/assets/aT5kWCgcFpLDuBmTsowebo/export-settings/esRJfp8Wm4xjbjdbXxhxw9R.json",
+    fetch_submission = requests.get("https://kc.humanitarianresponse.info/lagosjudiciarytemplate/forms/aT5kWCgcFpLDuBmTsowebo.json",
     headers=header,auth=('lagosjudiciarytemplate','lagosstate'))
     submission = json.loads(fetch_submission.content)
     context={

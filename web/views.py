@@ -72,34 +72,16 @@ def dashboard(request):
 # end csv function
 
 # Adding map to the project
-# def showmap(request):
-#     import requests
-#     import json
+def showmap(request):
+    import requests
+    import json
 
-#     k = 'hello world'
-#     context = {
-#         'k':k
-#     }
-
-#     header={
-#         "Authorization":"Token 9d605040f864b7572c3938ae5eaeacd28519dee7"
-#     }
-#     fetchmap = requests.get("https://kc.humanitarianresponse.info/api/v1/data/1204071.json",
-#     headers=header,auth=('lagosjudiciarytemplate','lagosstate'))
-#     mapper = json.loads(fetchmap.content)
-#     context= {
-#         'mapper':mapper
-#     }
-
-
-
-#     # m = folium.Map(location=[6.452019, 3.43081],zoom_start=10)
-#     # test = folium.Html('<b>Hello world</b>', script=True)
-#     # popup = folium.Popup(test, max_width=2650)
-#     # folium.RegularPolygonMarker(location=[6.452019, 3.43081], popup=popup).add_to(m)
-#     # m=m._repr_html_() #updated
-#     # context = {
-#     #     'my_map': m,
-#     #     }
-#     print(mapper)
-#     return render(request,"map.html",context)
+    m = folium.Map(location=[6.452019, 3.43081],zoom_start=10)
+    test = folium.Html('<b>Hello world</b>', script=True)
+    popup = folium.Popup(test, max_width=2650)
+    folium.Marker(location=[6.452019, 3.43081], popup=popup).add_to(m)
+    m=m._repr_html_() #updated
+    context = {
+        'my_map': m,
+        }
+    return render(request,"map.html",context)

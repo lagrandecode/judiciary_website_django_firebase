@@ -88,10 +88,10 @@ def count(request):
     }
     fetch_submission = requests.get("https://kobo.humanitarianresponse.info/api/v2/assets/aT5kWCgcFpLDuBmTsowebo.json",
     headers=header,auth=('lagosjudiciarytemplate','lagosstate'))
-    submission = json.loads(fetch_submission.content)
+    deploy = json.loads(fetch_submission.content)
     context={
-        "submission":submission
+        "deploy":deploy
     }
-    print(submission)
+    print(deploy)
     return render(request,"dashboard.html",context)
 # end function

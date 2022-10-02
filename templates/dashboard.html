@@ -16,18 +16,21 @@
 </head>
 <body>
     
-    <h1>{{submission.deployment__submission_count}}</h1>
+    <h1>{{deploy.deployment__submission_count}}</h1>
     <a href="{{submission.name}}"></a>
-    <h1>{{submission.name}}</h1>
-    <h1>{{version_id}}</h1>
-    <h1>{{submission.deployment__active}}</h1>
-    {% for api in submission %}
-    <h1>{{submission.deployment__active}}</h1>
-    <h1>{{submission.name}}</h1>
+    <h1>{{deploy.name}}</h1>
+    <h1>{{deploy.version_id}}</h1>
+    <h1>{{deploy.deployment__active}}</h1>
+    {% for api in deploy %}
+    <h1>{{api.deployment__active}}</h1>
+    <h1>{{api.name}}</h1>
 
 
     {% endfor %}
-    {{submission}}
+    {{deploy}}
+    {{csv.data_url_csv}}
+    {{csv.data_url_xlsx}}
+    {{deploy}}
 
     
     <h1>hello</h1>

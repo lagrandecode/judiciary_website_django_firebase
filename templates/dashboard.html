@@ -15,26 +15,7 @@
     <!-- end css -->
 </head>
 <body>
-    
-    <h1>{{deploy.deployment__submission_count}}</h1>
-    <a href="{{submission.name}}"></a>
-    <h1>{{deploy.name}}</h1>
-    <h1>{{deploy.version_id}}</h1>
-    <h1>{{deploy.deployment__active}}</h1>
-    {% for api in deploy %}
-    <h1>{{api.deployment__active}}</h1>
-    <h1>{{api.name}}</h1>
 
-
-    {% endfor %}
-    {{deploy}}
-    {{csv.data_url_csv}}
-    {{csv.data_url_xlsx}}
-    {{xlsx.data_url_xlsx}}
-    {{deploy}}
-
-    
-    <h1>hello</h1>
     <div class="container">
         <div class="header">
             <div class="logo">
@@ -57,7 +38,7 @@
                     <div class="title-card">
                         <h3 class="title-card">Fill Form</h3>
                         <div class="kobopoint">
-                            <img src="static\images\da.jpeg" alt="">
+                            <img src="static\images\da.jpeg" alt="fillform">
         
                         </div>
                     </div>
@@ -71,7 +52,7 @@
                         <h3 class="title-card">Total Submissions</h3>
                         <div class="kobopoint">
                         
-                            <h3 class="val">{{submission.deployment__submission_count}}</h3>
+                            <h3 class="val">{{deploy.deployment__submission_count}}</h3>
                       
         
                         </div>
@@ -84,7 +65,7 @@
                     <div class="title-card">
                         <h3 class="title-card">Send Notifications</h3>
                         <div class="kobopoint">
-                            <h3 class="val">50</h3>
+                            <img src="static\images\note.png" alt="notification">
         
                         </div>
                     </div>

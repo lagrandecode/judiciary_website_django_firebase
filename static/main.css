@@ -289,10 +289,7 @@ end dashboard css here */
     .container #flip:checked ~ form .login-form{
         display: none;
     }
-    .top{
-        font-size: 12px;
 
-    }
 
 
 

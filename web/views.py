@@ -5,6 +5,7 @@ from re import sub
 from django.shortcuts import render,redirect,HttpResponse
 import pyrebase
 from django.contrib import messages
+import folium
 
 # Create your views here.
 
@@ -70,4 +71,12 @@ def dashboard(request):
     return render(request,"dashboard.html",context)
 # end csv function
 
-
+# Adding map to the project
+def showmap(request):
+    m = folium.Map(location=[45.523, -122.675],zoom_start=10, width=750, height=500)
+    test = folium.Html('<b>Hello world</b>', script=True)
+    popup = folium.Popup(test, max_width=2650)
+    folium.RegularPolygonMarker(location=[45.523, -122.675], popup=popup).add_to(m)
+    m=m._repr_html_() #updated
+    context = {'my_map': m}
+    return render(request,"map.html",context)

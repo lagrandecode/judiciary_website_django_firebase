@@ -2,10 +2,11 @@ import email
 from email import header
 from multiprocessing import context
 from re import sub
-from django.shortcuts import render,redirect,HttpResponse
+from django.shortcuts import render,redirect,HttpResponse,HttpResponseRedirect
 import pyrebase
 from django.contrib import messages
 import folium
+from django.core.mail import send_mail
 
 # Create your views here.
 
@@ -33,6 +34,12 @@ firebase = pyrebase.initialize_app(firebaseConfig)
 auth = firebase.auth()
 
 def home(request):
+    send_mail(subject='hello',message='hi',
+    from_email='lagosjudiciarytemplate@gmail.com',
+    recipient_list=['seunogunmolufirst1@gmail.com'],fail_silently=False)
+
+# function to send message 
+
 # This is the authentication functions
     if request.method == 'POST':
         try:
@@ -45,6 +52,21 @@ def home(request):
             messages.info(request,'')
     return render(request, 'home.html')
 # End of authentication functions
+
+
+
+
+# function for sending email
+
+
+
+
+
+
+
+
+
+
 
 # function to download csv 
 def dashboard(request):

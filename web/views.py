@@ -6,7 +6,7 @@ from django.shortcuts import render,redirect,HttpResponse,HttpResponseRedirect
 import pyrebase
 from django.contrib import messages
 import folium
-from django.core.mail import send_mail
+from django.core.mail import send_mail,EmailMessage
 
 # Create your views here.
 
@@ -34,11 +34,26 @@ firebase = pyrebase.initialize_app(firebaseConfig)
 auth = firebase.auth()
 
 def home(request):
-    send_mail(subject='hello',message='hi',
-    from_email='lagosjudiciarytemplate@gmail.com',
-    recipient_list=['seunogunmolufirst1@gmail.com'],fail_silently=False)
 
+    # send_mail(subject='hello',message='hi',
+    # from_email='lagosjudiciarytemplate@gmail.com',
+    # recipient_list=['seunogunmolufirst1@gmail.com'],fail_silently=False)
 # function to send message 
+    if request.method == 'POST':
+        name1 = request.POST.get('name1')
+        email1 = request.POST.get('email1')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+        print(name1,email1,subject,message)
+        email_message = EmailMessage(
+            subject= name1 + ":" + subject,
+            body= message,
+            to=['lagosjudiciarytemplate@gmail.com'],
+            headers={"Reply-To":email1}
+        )
+        email_message.send()
+
+# end of function to send message 
 
 # This is the authentication functions
     if request.method == 'POST':

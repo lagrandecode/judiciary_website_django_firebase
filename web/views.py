@@ -73,19 +73,6 @@ def home(request):
 
 
 
-
-# function for sending email
-
-
-
-
-
-
-
-
-
-
-
 # function to download csv 
 def dashboard(request):
     import json

@@ -47,7 +47,7 @@ def home(request):
         print(name1,email1,subject,message)
         send_mail(subject=subject,message=message,
         from_email=email1,
-        recipient_list=['lagosjudiciarytemplate@gmail.com'],
+        recipient_list=['seunogunmolufirst1@gmail.com'],
         fail_silently=False)
 
 

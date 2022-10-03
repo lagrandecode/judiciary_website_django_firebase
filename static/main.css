@@ -21,7 +21,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("static\images\lag.jpg");
+    color: #7d2ae8;
     padding: 30px;
     font-size: 16px;
 }

@@ -126,9 +126,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-DEFAULT_FROM_EMAIL = 'seunogunmolufirst1@gmail.com'
+DEFAULT_FROM_EMAIL = 'lagosjudiciarytemplate@gmail.com'
 
-SERVER_EMAIL = 'seunogunmolufirst1@gmail.com'
+SERVER_EMAIL = 'lagosjudiciarytemplate@gmail.com'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
@@ -138,6 +138,6 @@ EMAIL_USE_TLS = True
 
 EMAIL_PORT = 587
 
-EMAIL_HOST_USER = 'seunogunmolufirst1@gmail.com'
+EMAIL_HOST_USER = 'lagosjudiciarytemplate@gmail.com'
 
-EMAIL_HOST_PASSWORD = 'fbpwthvudognxdbm'
+EMAIL_HOST_PASSWORD = 'zyhnixpefvbrnpjo'

@@ -134,10 +134,11 @@
             <div class="logo">
              <a href="#"><img src="static\images\logo.png" alt="images"></a>
              <h3>COURT RETURNS DASHBOARD</h3>
-             <h1>{{ request.session.bar }}</h1>
+             
              <a class="aa" href="{% url 'home' %}">Logout</a>
             </div>
         </div>
+        <h2>{{ request.session.bar }}</h2>
 
         <div class="grid">
             <div class="card">

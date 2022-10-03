@@ -1,3 +1,4 @@
+from audioop import reverse
 import email
 from email import header
 from multiprocessing import context
@@ -60,6 +61,10 @@ def home(request):
             password = request.POST['password']
             auth.sign_in_with_email_and_password(email=email,password=password)
             print("successful")
+            context={
+                'e':email
+            }
+            request.session['bar'] = email
             return redirect('dashboard')
         except:
             messages.info(request,'')

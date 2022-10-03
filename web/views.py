@@ -71,7 +71,14 @@ def home(request):
     return render(request, 'home.html')
 # End of authentication functions
 
+# Logout Function 
 
+# def logout(request):
+#     auth.logout()
+#     return render(request,'logout.html')
+
+
+# End of Logout Function
 
 # function to download csv 
 def dashboard(request):

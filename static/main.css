@@ -145,6 +145,15 @@ img{
     color: #333;
 }
 
+
+.sign{
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+
 .title:before{
     content: '';
     position: absolute;

@@ -43,65 +43,74 @@
         </div>
 
         <form method="post">
-            {% csrf_token %}
-            <div class="form-content">
-                <div class="login-form">
-                    <div class="title">Login</div>
-                    <div class="input-boxes">
-                        <div class="input-box">
-                            <i class='bx bxs-envelope'></i>
-                            <input type="text" name="email" placeholder="Enter your IBILE zone ID" required>
+            
+                {% csrf_token %}
+                <div class="form-content">
+                    <div class="login-form">
+                        <div class="title">Login</div>
+                        <div class="input-boxes">
+                            <div class="input-box">
+                                <i class='bx bxs-envelope'></i>
+                                <input type="text" name="email" placeholder="Enter your IBILE zone ID" required>
+                            </div>
+                            <div class="input-box">
+                                <i class='bx bxs-lock-alt'></i>
+                                <input type="password" name="password" placeholder="Password" required>
+                            </div>
+                            <div class="button">
+                                <input type="submit" value="Submit">
+                            </div>
+                            <div class="text">Don't have an account?<label for="flip"><span> Signup</span></label></div>
                         </div>
-                        <div class="input-box">
-                            <i class='bx bxs-lock-alt'></i>
-                            <input type="password" name="password" placeholder="Password" required>
-                        </div>
-                        <div class="button">
-                            <input type="submit" value="Submit">
-                        </div>
-                        <div class="text">Don't have an account?<label for="flip"><span> Signup</span></label></div>
+
+                    </div>
+             
+   
+
+
+
+            <div class="signup-form">
+                <div class="sign">Please Register here, The Admin will send you the login details.</div>
+                <div class="input-boxes">
+
+                    <div class="input-box">
+                        <i class='bx bxs-lock-alt'></i>
+                        <input type="text" placeholder="Name" required>
                     </div>
 
-                </div>
-
-
-                <div class="signup-form">
-                    <div class="title">Sign up</div>
-                    <div class="input-boxes">
-                        <div class="input-box">
-                            <i class='bx bxs-envelope'></i>
-                            <input type="text" placeholder="Enter your IBILE zone ID">
-                        </div>
-
-                        <div class="input-box">
-                            <i class='bx bxs-lock-alt'></i>
-                            <input type="password" placeholder="Password">
-                        </div>
-                        <div class="input-box">
-                            <i class='bx bxs-lock-alt'></i>
-                            <input type="password" placeholder="Confirm Password">
-                        </div>
-                        <div class="button">
-                            <input type="submit" value="Submit">
-                        </div>
-                        <div class="text">Already have an account? <label for="flip"><span> Login</span></label></div>
+                    <div class="input-box">
+                        <i class='bx bxs-lock-alt'></i>
+                        <input type="email" placeholder="Email" required>
                     </div>
-
+                    <div class="input-box">
+                        <i class='bx bxs-lock-alt'></i>
+                        <input type="text" placeholder="Subject">
+                    </div>
+                    <div class="input-box">
+                        <i class='bx bxs-lock-alt'></i>
+                        <input type="message" placeholder="Message">
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Submit">
+                    </div>
+                    <div class="text">Already have an account? <label for="flip"><span> Login</span></label></div>
                 </div>
+
             </div>
+    </div>
 
 
 
-        </form>
-        {% for message in messages %}
-         
-                <div class="message" role="alert">
-                    <h3>{{message}}</h3>
-                </div>
-           
-            {% endfor %}
-      
-    
+    </form>
+    {% for message in messages %}
+
+    <div class="message" role="alert">
+        <h3>{{message}}</h3>
+    </div>
+
+    {% endfor %}
+
+
 
 
 

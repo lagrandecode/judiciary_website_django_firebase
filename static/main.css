@@ -21,8 +21,12 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #7d2ae8;
+    background-size: 100% 100%;
+    background-color: var(--main-color);
+    background-position: center;
+    background-image: url('https://guardian.ng/wp-content/uploads/2017/12/link.jpg');
     padding: 30px;
+    object-fit: cover;
     font-size: 16px;
 }
 

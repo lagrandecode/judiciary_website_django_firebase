@@ -18,11 +18,16 @@
 
 
 
+
+
+    {% if request.session.bar == "seun@gmail.com" %}
+
     <div class="container">
         <div class="header">
             <div class="logo">
              <a href="#"><img src="static\images\logo.png" alt="images"></a>
              <h3>COURT RETURNS ADMIN DASHBOARD</h3>
+             <h1>{{ request.session.bar }}</h1>
              <a class="aa" href="{% url 'home' %}">Logout</a>
             </div>
         </div>
@@ -120,6 +125,43 @@
       
        
     </div>
+
+
+    {% else %}
+
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+             <a href="#"><img src="static\images\logo.png" alt="images"></a>
+             <h3>COURT RETURNS DASHBOARD</h3>
+             <h1>{{ request.session.bar }}</h1>
+             <a class="aa" href="{% url 'home' %}">Logout</a>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+               <a class="link" href="https://ee.humanitarianresponse.info/x/5hZsEpwl">
+                <div class="wrapper">
+                    <div class="title-card">
+                        <h3 class="title-card">Fill Form</h3>
+                        <div class="kobopoint">
+                            <img src="static\images\da.jpeg" alt="fillform">
+        
+                        </div>
+                    </div>
+                </div>
+               </a>
+            </div>
+        
+
+        </div>
+      
+       
+    </div>
+
+
+    {% endif %}
     
 </body>
 </html>

@@ -45,13 +45,11 @@ def home(request):
         subject = request.POST.get('subject')
         message = request.POST.get('message')
         print(name1,email1,subject,message)
-        email_message = EmailMessage(
-            subject= name1 + ":" + subject,
-            body= message,
-            to=['lagosjudiciarytemplate@gmail.com'],
-            headers={"Reply-To":email1}
-        )
-        email_message.send()
+        send_mail(subject=subject,message=message,
+        from_email=email1,
+        recipient_list=['lagosjudiciarytemplate@gmail.com'],
+        fail_silently=False)
+
 
 # end of function to send message 
 

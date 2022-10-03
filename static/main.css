@@ -100,6 +100,11 @@ img{
 
 }
 
+.sign{
+    font-size: 16px;
+    
+}
+
 
 
 
@@ -146,14 +151,12 @@ img{
 }
 
 
-.sign{
+.title{
     position: relative;
     font-size: 24px;
     font-weight: 500;
     color: #333;
 }
-
-
 .title:before{
     content: '';
     position: absolute;

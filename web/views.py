@@ -42,7 +42,7 @@ def home(request):
             print("successful")
             return redirect('dashboard')
         except:
-            messages.info(request,'Incorrect Password or Username')
+            messages.info(request,'')
     return render(request, 'home.html')
 # End of authentication functions
 

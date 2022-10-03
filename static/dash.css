@@ -13,9 +13,10 @@
 
 :root{
     --main-color: #7d2ae8; 
-    --white: #ffff;
+    --white: rgb(255, 255, 255);
     --red: red;
     --judiciary: #D7C185;
+    --black: rgb(0, 0, 0);
     
 }
 
@@ -32,6 +33,7 @@ body{
 .container{
     
     height: 100vh;
+    padding-bottom: 10px;
 
 }
 
@@ -60,14 +62,7 @@ body{
 
 
 
-/* .header{
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 30px;
-    justify-content: space-between;
-    display: flex;
-    gap: 4rem;
-} */
+
 
 
 

@@ -1,3 +1,13 @@
+{% for message in messages %}
+
+<script>
+    alert('{{message}}');
+</script>
+
+{% endfor %}
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
@@ -104,13 +114,7 @@
 
 
     </form>
-    {% for message in messages %}
 
-    <div class="message" role="alert">
-        <h3>{{message}}</h3>
-    </div>
-
-    {% endfor %}
 
 
 

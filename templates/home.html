@@ -1,12 +1,3 @@
-{% for message in messages %}
-
-<script>
-    alert('{{message}}');
-</script>
-
-{% endfor %}
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -121,6 +112,14 @@
 
 
     </div>
+
+    {% for message in messages %}
+
+    {{message}}
+
+    {% endfor %}
+
+
 
 
 </body>

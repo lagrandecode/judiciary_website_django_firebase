@@ -67,7 +67,7 @@ def home(request):
             request.session['bar'] = email
             return redirect('dashboard')
         except:
-            messages.info(request,'Invalid Username or Password')
+            messages.info(request,'')
     return render(request, 'home.html')
 # End of authentication functions
 

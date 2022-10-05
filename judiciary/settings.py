@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import os
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,6 +26,9 @@ SECRET_KEY = 'django-insecure-5biqxcrdj7%259$1c@@bo@+%fjci+=&nv2zx59)%9bo265ekes
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+if os.getcwd() == '/app':
+    DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -141,3 +145,39 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'seunogunmolufirst1@gmail.com'
 
 EMAIL_HOST_PASSWORD = 'ygwfjnqvjvfuvwku'
+
+
+# Monkeypatch python not to print "Broken Pipe" errors to stdout.
+
+from wsgiref import handlers
+
+handlers.BaseHandler.log_exception = lambda *args, **kwargs: None
+
+
+def patch_broken_pipe_error():
+    """Monkey Patch BaseServer.handle_error to not write
+    a stacktrace to stderr on broken pipe.
+    http://stackoverflow.com/a/22618740/362702"""
+    import sys
+    from socketserver import BaseServer
+    from wsgiref import handlers
+
+    handle_error = BaseServer.handle_error
+    log_exception = handlers.BaseHandler.log_exception
+
+    def is_broken_pipe_error():
+        type, err, tb = sys.exc_info()
+        return repr(err) == "error(32, 'Broken pipe')"
+
+    def my_handle_error(self, request, client_address):
+        if not is_broken_pipe_error():
+            handle_error(self, request, client_address)
+
+    def my_log_exception(self, exc_info):
+        if not is_broken_pipe_error():
+            log_exception(self, exc_info)
+
+    BaseServer = my_handle_error
+    handlers.BaseHandler.log_exception = my_log_exception
+
+patch_broken_pipe_error()

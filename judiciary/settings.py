@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+import socketserver
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -130,11 +131,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-DEFAULT_FROM_EMAIL = 'seunogunmolufirst1@gmail.com'
 
-SERVER_EMAIL = 'seunogunmolufirst1@gmail.com'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# SERVER_EMAIL = 'lagosjudiciarytemplate@gmail.com'
+
+
 
 EMAIL_HOST = 'smtp.gmail.com'
 
@@ -142,9 +143,9 @@ EMAIL_USE_TLS = True
 
 EMAIL_PORT = 587
 
-EMAIL_HOST_USER = 'seunogunmolufirst1@gmail.com'
+EMAIL_HOST_USER = 'lagosjudiciarytemplate@gmail.com'
 
-EMAIL_HOST_PASSWORD = 'ygwfjnqvjvfuvwku'
+EMAIL_HOST_PASSWORD = 'prcwmzslnoggvxbi'
 
 
 # Monkeypatch python not to print "Broken Pipe" errors to stdout.

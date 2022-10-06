@@ -37,8 +37,8 @@ auth = firebase.auth()
 def home(request):
 
     # send_mail(subject='hello',message='hi',
-    # from_email='lagosjudiciarytemplate@gmail.com',
-    # recipient_list=['seunogunmolufirst1@gmail.com'],fail_silently=False)
+    # from_email='seunogunmolufirst1@gmail.com',
+    # recipient_list=['lagosjudiciarytemplate@gmail.com'],fail_silently=False)
 # function to send message 
     if request.method == 'POST':
         name1 = request.POST.get('name1')
@@ -46,10 +46,16 @@ def home(request):
         subject = request.POST.get('subject')
         message = request.POST.get('message')
         print(name1,email1,subject,message)
-        send_mail(subject=subject,message=message,
-        from_email=email1,
-        recipient_list=['lagosjudiciarytemplate@gmail.com'],
-        fail_silently=False)
+        # send_mail(subject= name1 +" "+subject,message=message,
+        # from_email=email1,
+        # recipient_list=['lagosjudiciarytemplate@gmail.com'],
+        # fail_silently=False)
+        email_message=EmailMessage(subject=name1+" "+subject,body=message,
+        to=['lagosjudiciarytemplate@gmail.com'],
+        headers={"Replt-To":email1}
+        )
+        email_message.send()
+
 
 
 # end of function to send message 

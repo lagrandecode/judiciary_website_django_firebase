@@ -9,6 +9,7 @@ import pyrebase
 from django.contrib import messages
 import folium
 from django.core.mail import send_mail,EmailMessage
+from django.conf import settings
 
 # Create your views here.
 

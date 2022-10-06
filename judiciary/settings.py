@@ -143,9 +143,9 @@ EMAIL_USE_TLS = True
 
 EMAIL_PORT = 587
 
-EMAIL_HOST_USER = 'lagosjudiciarytemplate@gmail.com'
+EMAIL_HOST_USER = 'user.mail.judiciary@gmail.com'
 
-EMAIL_HOST_PASSWORD = 'prcwmzslnoggvxbi'
+EMAIL_HOST_PASSWORD = 'bifidzonvqeqzdif'
 
 
 # Monkeypatch python not to print "Broken Pipe" errors to stdout.

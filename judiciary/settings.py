@@ -133,7 +133,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
-# SERVER_EMAIL = 'lagosjudiciarytemplate@gmail.com'
+SERVER_EMAIL = 'lagosjudiciarytemplate@gmail.com'
 
 
 

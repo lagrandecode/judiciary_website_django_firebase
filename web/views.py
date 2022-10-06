@@ -1,4 +1,5 @@
 from audioop import reverse
+from distutils.command.clean import clean
 import email
 from email import header
 from multiprocessing import context
@@ -47,10 +48,11 @@ def home(request):
         message = request.POST.get('message')
         print(name1,email1,subject,message)
         # send_mail(subject= name1 +" "+subject,message=message,
-        # from_email=email1,
+        from_email=email1,
         # recipient_list=['lagosjudiciarytemplate@gmail.com'],
         # fail_silently=False)
-        email_message=EmailMessage(subject=name1+" "+subject,body=message,
+        email_message=EmailMessage(subject=subject,body=name1+ " " +email1+ " " +message,
+        from_email=email1,
         to=['lagosjudiciarytemplate@gmail.com'],
         headers={"Replt-To":email1}
         )

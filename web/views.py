@@ -54,7 +54,7 @@ def home(request):
         # fail_silently=False)
         email_message=EmailMessage(subject=subject,body=name1+ " " +email1+ " " +message,
         from_email=email1,
-        to=['lagosjudiciarytemplate@gmail.com'],
+        to=['lagosjudiciarytemplate@gmail.com',],
         headers={"Replt-To":email1}
         )
         email_message.send()

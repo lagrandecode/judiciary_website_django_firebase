@@ -137,12 +137,16 @@ body{
 
 /* css for users */
 .card-center{
+    /* background-color: aliceblue; */
     display: flex;
     align-items: center;
     justify-content: center;
     height: 500px;
 }
 
+.card-center{
+    background-color: white;
+}
 
 
 

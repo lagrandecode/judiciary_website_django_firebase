@@ -1,0 +1,1 @@
+web gunicorn judiciary.wsgi:application --log-file -

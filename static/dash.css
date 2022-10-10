@@ -135,6 +135,15 @@ body{
     width: 200px;
 }
 
+/* css for users */
+
+.grid-center{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
 
 
 @media (max-width: 959px){

@@ -136,6 +136,11 @@ body{
 }
 
 /* css for users */
+.card-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 

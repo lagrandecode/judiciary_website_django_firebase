@@ -14,7 +14,8 @@ from pathlib import Path
 import os
 import socketserver
 import django_heroku
-import dj_database_url  
+import dj_database_url 
+from whitenoise.storage import CompressedManifestStaticFilesStorage 
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5biqxcrdj7%259$1c@@bo@+%fjci+=&nv2zx59)%9bo265ekes'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 
@@ -132,7 +133,8 @@ STATICFILES_DIRS  = (os.path.join(BASE_DIR,'static'),
 )
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_ROOT = BASE_DIR / "staticfiles"
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 django_heroku.settings(locals())
 
 # Default primary key field type

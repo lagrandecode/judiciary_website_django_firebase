@@ -79,28 +79,26 @@ body{
 
 }
 
-img{
+.front img{
     height: 100%;
     width: 100%;
     position: absolute;
     object-fit: cover;
     z-index: 12;
- 
 
+    visibility: hidden;
     
 }
 
-
-.cover .back .backimg{
-    transform: rotateY(180deg);
+.back img{
+    
     height: 100%;
     width: 100%;
     position: absolute;
     object-fit: cover;
-    z-index: 12;
-   
-
+    z-index: 10000;
     backface-visibility: hidden;
+
 
 }
 

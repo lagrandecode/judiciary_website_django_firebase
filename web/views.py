@@ -4,6 +4,7 @@ import email
 from email import header
 from multiprocessing import context
 from re import sub
+from turtle import width
 from django.shortcuts import render,redirect,HttpResponse,HttpResponseRedirect
 import pyrebase
 from django.contrib import messages
@@ -122,10 +123,13 @@ def showmap(request):
 
     m = folium.Map(location=[6.452019, 3.43081],zoom_start=10)
     test = folium.Html('<b>Hello world</b>', script=True)
-    popup = folium.Popup(test, max_width=2650)
+    popup = folium.Popup(test,width=4000)
     folium.Marker(location=[6.452019, 3.43081], popup=popup).add_to(m)
     m=m._repr_html_() #updated
     context = {
         'my_map': m,
         }
     return render(request,"map.html",context)
+
+def not_found(request,exception):
+    return render(request, 'not-found.html')

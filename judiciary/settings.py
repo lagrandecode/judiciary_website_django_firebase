@@ -194,3 +194,4 @@ def patch_broken_pipe_error():
     handlers.BaseHandler.log_exception = my_log_exception
 
 patch_broken_pipe_error()
+# 

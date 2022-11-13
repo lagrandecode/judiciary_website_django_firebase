@@ -117,19 +117,19 @@ def dashboard(request):
 # end csv function
 
 # Adding map to the project
-def showmap(request):
-    import requests
-    import json
+# def showmap(request):
+#     import requests
+#     import json
 
-    m = folium.Map(location=[6.452019, 3.43081],zoom_start=10)
-    test = folium.Html('<b>Hello world</b>', script=True)
-    popup = folium.Popup(test,width=4000)
-    folium.Marker(location=[6.452019, 3.43081], popup=popup).add_to(m)
-    m=m._repr_html_() #updated
-    context = {
-        'my_map': m,
-        }
-    return render(request,"map.html",context)
+#     m = folium.Map(location=[6.452019, 3.43081],zoom_start=10)
+#     test = folium.Html('<b>Hello world</b>', script=True)
+#     popup = folium.Popup(test,width=4000)
+#     folium.Marker(location=[6.452019, 3.43081], popup=popup).add_to(m)
+#     m=m._repr_html_() #updated
+#     context = {
+#         'my_map': m,
+#         }
+#     return render(request,"map.html",context)
 
 def not_found(request,exception):
     return render(request, 'not-found.html')

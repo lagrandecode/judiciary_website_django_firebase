@@ -10,7 +10,7 @@ from django.conf import settings
 urlpatterns = [
     path('',views.home, name='home'),
     path('dashboard',views.dashboard,name='dashboard'),
-    path('map',views.showmap,name='map')
+
 
 ]
 

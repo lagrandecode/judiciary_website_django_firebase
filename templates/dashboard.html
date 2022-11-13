@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="shortcut icon" type="c-icon" href="static\images\20.png">
+    <link rel="shortcut icon" type="c-icon" href="{% static 'images\20.png' %}">
 
     <!-- start css -->
     <link rel="stylesheet" href="{% static 'dash.css' %}">
@@ -26,7 +26,7 @@
     <div class="container">
         <div class="header">
             <div class="logo">
-             <a href="#"><img src="static\images\logo.png" alt="images"></a>
+             <a href="#"><img src="{% static 'images\logo.png' %}" alt="images"></a>
              <h3>COURT RETURNS ADMIN DASHBOARD</h3>
              <!-- <h1>{{ request.session.bar }}</h1> -->
              <a class="aa" href="{% url 'home' %}">Logout</a>
@@ -40,7 +40,7 @@
                     <div class="title-card">
                         <h3 class="title-card">Fill Form</h3>
                         <div class="kobopoint">
-                            <img src="static\images\da.jpeg" alt="fillform">
+                            <img src="{% static 'images\da.jpeg' %}" alt="fillform">
         
                         </div>
                     </div>
@@ -68,7 +68,7 @@
                         <div class="title-card">
                             <h3 class="title-card">Send Notifications</h3>
                             <div class="kobopoint">
-                                <img src="static\images\note2.jpg" alt="notification">
+                                <img src="{% static 'images\note2.jpg' %}" alt="notification">
             
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                         <div class="title-card">
                             <h3 class="title-card">View Map</h3>
                             <div class="kobopoint">
-                                <img src="static\images\map2.png" alt="map">
+                                <img src="{% static 'images\map2.png' %}" alt="map">
                             </div>
                         </div>
                     </div>
@@ -98,7 +98,7 @@
                         <div class="title-card">
                             <h3 class="title-card">Download CSV Data</h3>
                             <div class="kobopoint">
-                                <img src="static\images\csv.png" alt="csv">
+                                <img src="{% static 'images\csv.png' %}" alt="csv">
             
                             </div>
                         </div>
@@ -112,7 +112,7 @@
                         <div class="title-card">
                             <h3 class="title-card">Download Excel Data</h3>
                             <div class="kobopoint">
-                                <img src="static\images\excel.png" alt="excel">
+                                <img src="{% static 'images\excel.png' %}" alt="excel">
             
                             </div>
                         </div>
@@ -133,7 +133,7 @@
     <div class="container">
         <div class="header">
             <div class="logo">
-             <a href="#"><img src="static\images\logo.png" alt="images"></a>
+             <a href="#"><img src="{% static 'images\logo.png' %}" alt="images"></a>
              <h3>COURT RETURNS DASHBOARD</h3>
              
              <a class="aa" href="{% url 'home' %}">Logout</a>
@@ -148,8 +148,7 @@
                     <div class="title-card">
                         <h3 class="title-card">Fill Form</h3>
                         <div class="kobopoint">
-                            <img src="static\images\da.jpeg" alt="fillform">
-        
+                            <img src="{% static 'images\da.jpeg' %}" alt="fillform">
                         </div>
                     </div>
                 </div>
